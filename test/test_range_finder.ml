@@ -52,12 +52,12 @@ let waves_config = Waves_config.no_waves
 
 (* let waves_config = *)
 (*   Waves_config.to_directory "/tmp/" *)
-(*   |> Waves_config.as_wavefile_format ~format:Hardcamlwaveform *)
+(* |> Waves_config.as_wavefile_format ~format:Hardcamlwaveform *)
 (* ;; *)
 
 (* let waves_config = *)
 (*   Waves_config.to_directory "/tmp/" *)
-(*   |> Waves_config.as_wavefile_format ~format:Vcd *)
+(* |> Waves_config.as_wavefile_format ~format:Vcd *)
 (* ;; *)
 
 let%expect_test "Simple test, optionally saving waveforms to disk" =
@@ -73,7 +73,7 @@ let%expect_test "Simple test with printing waveforms directly" =
   let display_rules =
     [ Display_rule.port_name_matches
         ~wave_format:(Bit_or Unsigned_int)
-        (Re.Glob.glob "range_finder*" |> Re.compile)
+        (Glob "range_finder*")
     ]
   in
   Harness.run_advanced
