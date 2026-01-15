@@ -17,4 +17,5 @@ available: arch != "arm32" & arch != "x86_32"
 synopsis: "Simple starter project for hardcaml development"
 description: "
 A simple starter project including a hardcaml design, testbench, and RTL generation.
+TODO: update information in this file
 "

@@ -11,33 +11,9 @@ This repository provides a simple starter template for getting started with Hard
 
 ## Installing Hardcaml
 
-Hardcaml can be installed with opam. We highly recommend using Hardcaml with OxCaml (a
-bleeding-edge OCaml compiler), which includes some Jane Street compiler extensions and
-maintains the latest version of Hardcaml; while still maintaining direct compatibility
-with existing OCaml code and libraries. Note that when looking at Hardcaml GitHub
-repositories, the OxCaml version is in a branch named `with-extensions`.
+A [Dockerfile](Dockerfile) is provided that installs OxCaml and Hardcaml.
 
-Install [opam, the OxCaml compiler, and some basic developer
-tools](https://oxcaml.org/get-oxcaml/) to get started.
-
-For additional information on setting up the OCaml toolchain and editor support, see [Real
-World OCaml](https://dev.realworldocaml.org/install.html).
-
-Once it's set up, make sure you have the current switch selected in your shell:
-
-```
-opam switch 5.2.0+ox
-
-eval $(opam env)
-```
-
-Then, install the core Hardcaml libraries and some other libraries used in Hardcaml projects:
-
-```
-opam install -y hardcaml hardcaml_test_harness hardcaml_waveterm ppx_hardcaml
-
-opam install -y core core_unix ppx_jane rope re dune
-```
+Alternatively, see the Hardcaml template project's README section on installing Hardcaml [here](https://github.com/janestreet/hardcaml_template_project/blob/f27e421f20ff3c35b36d183199442c5260e5a4c7/README.md#installing-hardcaml).
 
 ## Building the Example Project
 
