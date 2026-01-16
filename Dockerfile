@@ -28,3 +28,6 @@ RUN opam install -y \
 	hardcaml hardcaml_test_harness hardcaml_waveterm ppx_hardcaml \
 	core ppx_jane rope re dune \
 	&& opam clean
+
+# Remove default docker git credentials
+RUN rm -r ~/.gitconfig
