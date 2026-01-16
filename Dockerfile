@@ -5,7 +5,8 @@ FROM ocaml/opam:ubuntu-24.04
 
 WORKDIR /home/opam
 
-RUN DEBIAN_FRONTEND=noninteractive sudo apt-get update && sudo apt-get install -y autoconf libgmp3-dev
+# autoconf needed for OxCaml, gmp needed for some ocaml dep; tzdata needed for OCaml LSP
+RUN DEBIAN_FRONTEND=noninteractive sudo apt-get update && sudo apt-get install -y autoconf libgmp3-dev tzdata
 
 # install OxCaml and Hardcaml
 # use OPAM 2.5 (default in container is 2.0)
