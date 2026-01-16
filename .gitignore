@@ -1,8 +1,7 @@
 .vscode
-.bash_history
-
 _build
 *.install
 *.merlin
 _opam
-
+*.exe
+*.bc
