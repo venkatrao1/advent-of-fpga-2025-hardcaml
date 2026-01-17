@@ -31,12 +31,14 @@ end
 
 module Range_finder_gen = Generate_rtl_functor(Range_finder)
 module Digit_parser_gen = Generate_rtl_functor(Digit_parser)
+module Day1_part1_gen = Generate_rtl_functor(Day1.Part1)
 
 let () =
   Command_unix.run
     (Command.group ~summary:""
       [ "range-finder", Range_finder_gen.generate_rtl_command
       ; "digit-parser", Digit_parser_gen.generate_rtl_command
+      ; "day1-part1", Day1_part1_gen.generate_rtl_command
       ]
     )
 ;;
