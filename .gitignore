@@ -1,6 +1,5 @@
 .vscode
 _build
-test_inputs
 *.install
 *.merlin
 _opam

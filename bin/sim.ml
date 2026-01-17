@@ -18,8 +18,9 @@ let filename_param =
   let open Command.Param in
   anon ("filename" %: string)
 
+module Harness = Cyclesim_harness.Make (Day1.I) (Day1.O)
+
 module Sim_Make (Circuit_module: Sim_circuit) = struct
-  module Harness = Cyclesim_harness.Make (Day1.I) (Day1.O)
 
   let simple_testbench (sample_input: string) (sim : Harness.Sim.t) =
     let inputs = Cyclesim.inputs sim in

@@ -1,9 +1,9 @@
 opam-version: "2.0"
-maintainer: "Jane Street developers"
-authors: ["Jane Street Group, LLC"]
-homepage: "https://github.com/janestreet/hardcaml_template_project"
-bug-reports: "https://github.com/janestreet/hardcaml_template_project/issues"
-dev-repo: "git+https://github.com/janestreet/hardcaml_template_project.git"
+maintainer: "Venkat Rao"
+authors: ["Jane Street Group, LLC", "Venkat Rao"]
+homepage: "https://github.com/venkatrao1/advent-of-fpga-2025-hardcaml"
+bug-reports: "https://github.com/venkatrao1/advent-of-fpga-2025-hardcaml/issues"
+dev-repo: "git+https://github.com/venkatrao1/advent-of-fpga-2025-hardcaml.git"
 doc: "https://ocaml.janestreet.com/ocaml-core/latest/doc/hardcaml_template_project/index.html"
 license: "MIT"
 build: [
@@ -14,8 +14,7 @@ depends: [
   "dune" {>= "3.17.0"}
 ]
 available: arch != "arm32" & arch != "x86_32"
-synopsis: "Simple starter project for hardcaml development"
+synopsis: "Advent of Code 2025 solutions in Hardcaml"
 description: "
-A simple starter project including a hardcaml design, testbench, and RTL generation.
-TODO: update information in this file
+Advent of Code 2025 solutions in Hardcaml.
 "
