@@ -1,8 +1,8 @@
 (executables
  (modes byte exe)
- (names generate)
+ (names generate sim)
  (libraries core.command core_unix.command_unix core hardcaml
-   hardcaml_demo_project jane_rope)
+   hardcaml_demo_project hardcaml_test_harness jane_rope)
  (preprocess
   (pps ppx_jane))
  (promote))
