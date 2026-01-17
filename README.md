@@ -42,3 +42,18 @@ bin/generate.exe part1-day1 # or part1-day2
 
 Note that dune should automatically copy the compiled binary into your source directory,
 but if it does not, all build products can be found in `_build/default/`.
+
+## Solution approaches
+
+### Day 1 ([source](src/day1.ml))
+
+For day 1, the main state to keep track of is our current position on the dial (from 0-99).
+Our position wraps around at either end of this range - when rotating left, we underflow back to 99 after 0, and when rotating right, we overflow from 99 to 0.
+
+Instead of handling both overflow cases, I chose to flip the current position whenever the current direction changes (this works because the problem is symmetric; rotating left by X is the same as mirroring our current position, then rotating right by X.)
+
+For part 1, we simply check if the next position will be equal to zero, and add one to our answer if so.
+
+For part 2, we need to also get the number of times that we pass zero:
+1. If the input rotation is larger than 100, we can simply add the input, excluding the last two digits, to our answer. This adds floor(input / 100) to our answer, which is the number of full rotations on this line.
+2. If the position is overflowing, we know that we must have crossed 0, so we add an additional 1 to our answer. (Underflow doesn't happen, because we flip our current position and then add instead of rotating counterclockwise, as described above.)
